@@ -34,7 +34,7 @@ void Student::print() {
     cout << _student_id << "First Name: " << _first_name << "\tLast Name: " << _last_name
     << "\tAge: " << _age << "\tDays In Course: {" << _days_in_course[0]  << ", "
     << _days_in_course[1] << ", " << _days_in_course[2] << "}\t Degree Program: "
-    << _degree_program << std::endl;
+    << _degree_program << "\n";
 }
 
 // getter functions
