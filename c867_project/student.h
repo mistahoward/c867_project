@@ -1,13 +1,12 @@
 //
-//  student.hpp
+//  student.h
 //  c867_project
 //
 //  Created by Alex Howard on 1/18/23.
 //
 
-#ifndef student_hpp
-#define student_hpp
+#ifndef student_h
+#define student_h
 
-#include <stdio.h>
 
-#endif /* student_hpp */
+#endif /* student_h */

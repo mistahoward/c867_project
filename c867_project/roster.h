@@ -1,13 +1,12 @@
 //
-//  roster.hpp
+//  roster.h
 //  c867_project
 //
 //  Created by Alex Howard on 1/18/23.
 //
 
-#ifndef roster_hpp
-#define roster_hpp
+#ifndef roster_h
+#define roster_h
 
-#include <stdio.h>
 
-#endif /* roster_hpp */
+#endif /* roster_h */

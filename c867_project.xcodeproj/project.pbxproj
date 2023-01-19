@@ -29,9 +29,9 @@
 		6222BFF22978C71A00FFF02D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6222BFFB2978C9FF00FFF02D /* degree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = degree.h; sourceTree = "<group>"; };
 		6222BFFC2978CA4400FFF02D /* student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
-		6222BFFD2978CA4400FFF02D /* student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = student.hpp; sourceTree = "<group>"; };
 		6222BFFF2978CA5900FFF02D /* roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = roster.cpp; sourceTree = "<group>"; };
-		6222C0002978CA5900FFF02D /* roster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = roster.hpp; sourceTree = "<group>"; };
+		6222C0022978D04300FFF02D /* student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = student.h; sourceTree = "<group>"; };
+		6222C0032978D05100FFF02D /* roster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = roster.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				6222BFF22978C71A00FFF02D /* main.cpp */,
-				6222BFFB2978C9FF00FFF02D /* degree.h */,
 				6222BFFC2978CA4400FFF02D /* student.cpp */,
-				6222BFFD2978CA4400FFF02D /* student.hpp */,
 				6222BFFF2978CA5900FFF02D /* roster.cpp */,
-				6222C0002978CA5900FFF02D /* roster.hpp */,
+				6222BFFB2978C9FF00FFF02D /* degree.h */,
+				6222C0022978D04300FFF02D /* student.h */,
+				6222C0032978D05100FFF02D /* roster.h */,
 			);
 			path = c867_project;
 			sourceTree = "<group>";
