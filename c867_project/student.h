@@ -33,6 +33,7 @@ class Student {
     string email();
     int age();
     int * daysInCourse();
+    DegreeProgram degree_program();
     
     // mutator functions
     void setStudentId(string new_id);
@@ -41,6 +42,7 @@ class Student {
     void setEmail(string new_email);
     void setAge(int new_age);
     void setDaysInCourse(int *days_in_course);
+    void setDegreeProgram(DegreeProgram new_program);
     
     // print function
     void print();

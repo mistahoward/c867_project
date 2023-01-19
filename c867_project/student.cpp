@@ -44,6 +44,7 @@ string Student::last_name() { return this->_last_name; }
 string Student::email() { return this->_email; }
 int Student::age() { return this->_age; }
 int* Student::daysInCourse() { return this->_days_in_course; }
+DegreeProgram Student::degree_program() { return this->_degree_program; }
 
 // mutator functions
 void Student::setDaysInCourse(int *days_in_course) {
@@ -62,6 +63,9 @@ void Student::setFirstName(string new_first_name) {
 }
 void Student::setStudentId(string new_id) {
     this->_student_id = new_id;
+}
+void Student::setDegreeProgram(DegreeProgram new_program) {
+    this->_degree_program = new_program;
 }
 
 //Student::~Student() {
