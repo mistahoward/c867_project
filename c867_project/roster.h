@@ -15,14 +15,14 @@ using std::string;
 
 class Roster {
  public:
-    void add(string studentID, string firstName, string lastName, string emailAddress,
-    int age, int daysInCourse1, int daysInCourse2, int daysInCourse3,
+    void add(string student_id, string first_name, string last_name, string email,
+    int age, int days_in_course_1, int days_in_course_2, int days_in_course_3,
     DegreeProgram degreeProgram);
     void remove(string studentID);
     void printAll();
-    void printAverageDaysInCourse(string studentID);
+    void printAverageDaysInCourse(string student_id);
     void printInvalidEmails();
-    void printByDegreeProgram(DegreeProgram degreeProgram);
+    void printByDegreeProgram(DegreeProgram degree_program);
     ~Roster();
  private:
     int previous_index = -1;
