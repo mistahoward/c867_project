@@ -79,8 +79,22 @@ void Roster::printAverageDaysInCourse(string student_id) {
                 int average = (days_1 + days_2 + days_3) / 3;
                 cout << "Average completion by student (in days) " << student_id << " is " <<
                 average << "\n";
+            } else {
+                cout << "Could not calculate average. \n";
             }
             break;
         }
+    }
+}
+
+void Roster::printInvalidEmails() {
+    for (int i = 0; i <= Roster::roster_size; i++) {
+        Student* current_student = classRosterArray[i];
+        string working_email = current_student->email();
+        if (working_email.find("@") && working_email.find(".") && !working_email.find(" ")) {
+            break;
+        }
+        cout << "Student ID " << current_student->student_id() << " has an invalid email of " <<
+        working_email << ".\n";
     }
 }
