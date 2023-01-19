@@ -46,3 +46,10 @@ void Roster::remove(string student_id) {
         cout << student_id << " not found. Deletion failed.\n";
     }
 }
+
+void Roster::printAll() {
+    for (int i = 0; i <= roster_size; i++) {
+        Student* current_student = classRosterArray[i];
+        current_student->print();
+    }
+}
