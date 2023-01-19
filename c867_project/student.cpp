@@ -10,7 +10,7 @@
 const string studentData[] = {
     "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,Alex,Howard,jhow119@wgu.edu,25,7,7,7,SOFTWARE"
 };
-
+// default constructor
 Student::Student() {
     this -> _student_id = "";
     this -> _first_name = "";
@@ -20,7 +20,17 @@ Student::Student() {
     this -> _days_in_course[0] = 0;
     this -> _days_in_course[1] = 0;
     this -> _days_in_course[2] = 0;
-    this -> _degree_program = "";
+    this -> _degree_program = SOFTWARE;
+}
+// full constructor
+Student::Student(string student_id, string first_name, string last_name, string email, int age, int days[], DegreeProgram degreeType) {
+    this->_student_id = student_id;
+    this->_first_name = first_name;
+    this->_last_name = last_name;
+    this->_email = email;
+    this->_age = age;
+    for (int i = 0; i < 3; i++) { this->_days_in_course[i] = days[i]; }
+    this->_degree_program = degreeType;
 }
 
 void Student::print() {

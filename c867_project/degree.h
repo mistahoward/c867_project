@@ -11,6 +11,6 @@ enum DegreeProgram {
     SECURITY,
     NETWORK,
     SOFTWARE
-}
+};
 
 #endif /* degree_h */

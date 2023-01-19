@@ -9,6 +9,8 @@
 #define C867_PROJECT_STUDENT_H_
 #include <string>
 #include <iostream>
+#include "roster.h"
+#include "degree.h"
 
 using std::string;
 using std::cout;
@@ -21,7 +23,7 @@ class Student {
     string _email;
     int _age;
     int _days_in_course[3];
-    string _degree_program;
+    DegreeProgram _degree_program;
     
  public:
     // accessor functions
@@ -43,8 +45,9 @@ class Student {
     // print function
     void print();
     
-    // constructor
+    // constructors
     Student();
+    Student(string student_id, string first_name, string last_name, string email, int age, int days[], DegreeProgram degreeType);
 };
 
 #endif  // C867_PROJECT_STUDENT_H_
