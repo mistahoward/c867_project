@@ -64,6 +64,6 @@ void Student::setStudentId(string new_id) {
     this->_student_id = new_id;
 }
 
-Student::~Student() {
-    return;
-}
+//Student::~Student() {
+//    return;
+//}
