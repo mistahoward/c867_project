@@ -45,5 +45,4 @@ void Roster::remove(string student_id) {
     } else {
         cout << student_id << " not found. Deletion failed.\n";
     }
-    return 0;
 }
