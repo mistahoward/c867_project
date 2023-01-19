@@ -48,8 +48,39 @@ void Roster::remove(string student_id) {
 }
 
 void Roster::printAll() {
-    for (int i = 0; i <= roster_size; i++) {
+    for (int i = 0; i <= Roster::roster_size; i++) {
         Student* current_student = classRosterArray[i];
         current_student->print();
+    }
+}
+
+void Roster::printAverageDaysInCourse(string student_id) {
+    for(int i = 0; i <= Roster::roster_size; i++) {
+        Student* current_student = classRosterArray[i];
+        if (current_student->student_id() == student_id) {
+            int* days_in_course = current_student->daysInCourse();
+            int days_1 = 0;
+            int days_2 = 0;
+            int days_3 = 0;
+            for (int j = 0; j < 3; j++) {
+                switch (j) {
+                    case 0:
+                        days_1 = days_in_course[0];
+                        break;
+                    case 1:
+                        days_2 = days_in_course[1];
+                        break;
+                    case 2:
+                        days_3 = days_in_course[2];
+                        break;
+                }
+            }
+            if (days_1 && days_2 && days_3) {
+                int average = (days_1 + days_2 + days_3) / 3;
+                cout << "Average completion by student (in days) " << student_id << " is " <<
+                average << "\n";
+            }
+            break;
+        }
     }
 }
