@@ -66,12 +66,24 @@ class Student {
             _days_in_course[i] = days_in_course[i];
         }
     }
-    
+    // print function
     void print() {
         cout << _student_id << "First Name: " << _first_name << "\tLast Name: " << _last_name
         << "\tAge: " << _age << "\tDays In Course: {" << _days_in_course[0]  << ", "
         << _days_in_course[1] << ", " << _days_in_course[2] << "}\t Degree Program: "
         << _degree_program << std::endl;
+    }
+    // default constructor
+    Student() {
+        this -> _student_id = "";
+        this -> _first_name = "";
+        this -> _last_name = "";
+        this -> _email = "";
+        this -> _age = 0;
+        this -> _days_in_course[0] = 0;
+        this -> _days_in_course[1] = 0;
+        this -> _days_in_course[2] = 0;
+        this -> _degree_program = "";
     }
 };
 
