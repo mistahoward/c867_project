@@ -8,8 +8,10 @@
 #ifndef C867_PROJECT_STUDENT_H_
 #define C867_PROJECT_STUDENT_H_
 #include <string>
+#include <iostream>
 
 using std::string;
+using std::cout;
 
 class Student {
  private:
@@ -18,7 +20,7 @@ class Student {
     string _last_name;
     string _email;
     int _age;
-    int * _days_in_course;
+    int _days_in_course[3];
     string _degree_program;
     
  public:
@@ -58,8 +60,18 @@ class Student {
     void setAge(int new_age) {
         _age = new_age;
     }
-    void setDaysInCourse(int * new_days_in_course) {
-        _days_in_course = new_days_in_course;
+    void setDaysInCourse(int *days_in_course)
+    {
+        for(int i = 0; i < 3; i++) {
+            _days_in_course[i] = days_in_course[i];
+        }
+    }
+    
+    void print() {
+        cout << _student_id << "First Name: " << _first_name << "\tLast Name: " << _last_name
+        << "\tAge: " << _age << "\tDays In Course: {" << _days_in_course[0]  << ", "
+        << _days_in_course[1] << ", " << _days_in_course[2] << "}\t Degree Program: "
+        << _degree_program << std::endl;
     }
 };
 
