@@ -23,7 +23,7 @@ void Roster::add(string student_id, string first_name, string last_name, string 
 void Roster::remove(string working_student_id) {
     bool student_exists = false;
     bool deleted = false;
-    for (int i = 0; i < Roster::roster_size; i++) {
+    for (int i = 0; i <= Roster::previous_index; i++) {
         if (classRosterArray[i]->student_id() == working_student_id) {
             student_exists = true;
             if (i < roster_size - 1) {
