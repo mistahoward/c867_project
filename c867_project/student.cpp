@@ -10,7 +10,7 @@
 #include <string>
 
 using std::string;
-
+// default constructor
 Student::Student() {
     this -> _student_id = "";
     this -> _first_name = "";
@@ -34,6 +34,8 @@ Student::Student(string student_id, string first_name, string last_name, string 
 }
 
 void Student::print() {
+    // grab all of the values and print them
+    // I implemented this using the private properties since we are within this class. It can be also implemented using the accessors (the getters)
     cout << "Student ID: " <<_student_id << "\tFirst Name: " << _first_name << "\tLast Name: " << _last_name
     << "\tAge: " << _age << "\tDays In Course: {" << _days_in_course[0]  << ", "
     << _days_in_course[1] << ", " << _days_in_course[2] << "}\t Degree Program: "
@@ -74,6 +76,7 @@ void Student::setDegreeProgram(DegreeProgram new_program) {
     this->_degree_program = new_program;
 }
 
+// destructor is not needed since we statically type the array size (days)
 //Student::~Student() {
 //    return;
 //}

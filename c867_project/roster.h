@@ -28,7 +28,7 @@ private:
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degree_program);
     Student* classRosterArray[roster_size];
-//    ~Roster();
+    ~Roster();
 };
 
 #endif /* roster_h */

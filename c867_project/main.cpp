@@ -21,10 +21,10 @@ int main() {
     };
     
     cout << "C867 - Scripting and Programming - Applications - C++ - 000733175 - Jacob 'Alex' Howard\n";
+    // create an empty classRoster object
     Roster classRoster;
-    int numberOfStudents = sizeof(studentData) / sizeof(studentData[0]);
 
-    for(int i = 0; i < numberOfStudents; i++)
+    for(int i = 0; i < 5; i++)
     {
         // grab the current string of values and save it to ws (working student)
         string ws = studentData[i];
@@ -72,16 +72,16 @@ int main() {
         
         classRoster.add(wsid, wsfn, wsln, wse, wsa, wsd1, wsd2, wsd3, wsdp);
     }
-    // classRoster.printAll();
-    // classRoster.printInvalidEmails();
+     classRoster.printAll();
+     classRoster.printInvalidEmails();
     for(int i = 0; i < 5; i++) {
         Student* current_student = classRoster.classRosterArray[i];
         string csid = current_student->student_id();
-//        classRoster.printAverageDaysInCourse(csid);
+        classRoster.printAverageDaysInCourse(csid);
     }
-//    classRoster.printByDegreeProgram(SOFTWARE);
-//    classRoster.remove("A3");
-//    classRoster.printAll();
-//    classRoster.remove("A3");
+    classRoster.printByDegreeProgram(SOFTWARE);
+    classRoster.remove("A3");
+    classRoster.printAll();
+    classRoster.remove("A3");
     return 0;
 }
