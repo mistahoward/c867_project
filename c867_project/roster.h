@@ -15,6 +15,9 @@
 using std::string;
 
 class Roster {
+private:
+   int previous_index = -1;
+   const static int roster_size = 5;
  public:
     void add(string student_id, string first_name, string last_name, string email,
     int age, int days_in_course_1, int days_in_course_2, int days_in_course_3,
@@ -24,11 +27,8 @@ class Roster {
     void printAverageDaysInCourse(string student_id);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degree_program);
-//    ~Roster();
- private:
-    int previous_index = -1;
-    const static int roster_size = 5;
     Student* classRosterArray[roster_size];
+//    ~Roster();
 };
 
 #endif /* roster_h */

@@ -100,7 +100,7 @@ void Roster::printInvalidEmails() {
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degree_program) {
-    for (int i = 0; i <= Roster::roster_size; i++) {
+    for (int i = 0; i < Roster::roster_size; i++) {
         Student* current_student = classRosterArray[i];
         if (current_student->degree_program() == degree_program) {
             current_student->print();

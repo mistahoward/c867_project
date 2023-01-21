@@ -73,6 +73,14 @@ int main() {
         classRoster.add(wsid, wsfn, wsln, wse, wsa, wsd1, wsd2, wsd3, wsdp);
     }
     // classRoster.printAll();
-    classRoster.printInvalidEmails();
+    // classRoster.printInvalidEmails();
+    for(int i = 0; i < 5; i++) {
+        Student* current_student = classRoster.classRosterArray[i];
+        string csid = current_student->student_id();
+//        classRoster.printAverageDaysInCourse(csid);
+    }
+//    classRoster.printByDegreeProgram(SOFTWARE);
+    classRoster.remove("A3");
+    classRoster.printAll();
     return 0;
 }
