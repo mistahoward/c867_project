@@ -23,7 +23,7 @@ void Roster::add(string student_id, string first_name, string last_name, string 
 void Roster::remove(string working_student_id) {
     bool student_exists = false;
     bool deleted = false;
-    for (int i = 0; i <= Roster::previous_index; i++) {
+    for (int i = 0; i < Roster::roster_size; i++) {
         if (classRosterArray[i]->student_id() == working_student_id) {
             student_exists = true;
             if (i < roster_size - 1) {
@@ -45,14 +45,14 @@ void Roster::remove(string working_student_id) {
 }
 
 void Roster::printAll() {
-    for (int i = 0; i < Roster::roster_size; i++) {
+    for (int i = 0; i <= Roster::previous_index; i++) {
         Student* current_student = classRosterArray[i];
         current_student->print();
     }
 }
 
 void Roster::printAverageDaysInCourse(string working_student_id) {
-    for(int i = 0; i < Roster::roster_size; i++) {
+    for(int i = 0; i <= Roster::previous_index; i++) {
         Student* current_student = classRosterArray[i];
         if (current_student->student_id() == working_student_id) {
             int* days_in_course = current_student->daysInCourse();
@@ -85,7 +85,7 @@ void Roster::printAverageDaysInCourse(string working_student_id) {
 }
 
 void Roster::printInvalidEmails() {
-    for (int i = 0; i < Roster::roster_size; i++) {
+    for (int i = 0; i <= Roster::previous_index; i++) {
         Student* current_student = classRosterArray[i];
         string working_email = current_student->email();
         bool hasAt = working_email.find("@") != string::npos;
@@ -100,7 +100,7 @@ void Roster::printInvalidEmails() {
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degree_program) {
-    for (int i = 0; i < Roster::roster_size; i++) {
+    for (int i = 0; i <= Roster::previous_index; i++) {
         Student* current_student = classRosterArray[i];
         if (current_student->degree_program() == degree_program) {
             current_student->print();

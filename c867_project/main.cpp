@@ -80,7 +80,7 @@ int main() {
 //        classRoster.printAverageDaysInCourse(csid);
     }
 //    classRoster.printByDegreeProgram(SOFTWARE);
-    classRoster.remove("A3");
-    classRoster.printAll();
+//    classRoster.remove("A3");
+//    classRoster.printAll();
     return 0;
 }
