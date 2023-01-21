@@ -7,9 +7,10 @@
 
 #ifndef roster_h
 #define roster_h
-#include "student.h"
-#include <iostream>
+
 #include <string>
+#include "degree.h"
+#include "student.h"
 
 using std::string;
 
@@ -17,13 +18,13 @@ class Roster {
  public:
     void add(string student_id, string first_name, string last_name, string email,
     int age, int days_in_course_1, int days_in_course_2, int days_in_course_3,
-    DegreeProgram degreeProgram);
-    void remove(string studentID);
+    DegreeProgram degree_program);
+    void remove(string student_id);
     void printAll();
     void printAverageDaysInCourse(string student_id);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degree_program);
-    ~Roster();
+//    ~Roster();
  private:
     int previous_index = -1;
     const static int roster_size = 5;

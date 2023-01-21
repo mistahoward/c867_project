@@ -5,11 +5,10 @@
 //  Created by Alex Howard on 1/18/23.
 //
 
-#ifndef C867_PROJECT_STUDENT_H_
-#define C867_PROJECT_STUDENT_H_
+#ifndef student_h
+#define student_h
 #include <string>
 #include <iostream>
-#include "roster.h"
 #include "degree.h"
 
 using std::string;
@@ -49,8 +48,11 @@ class Student {
     
     // constructors
     Student();
-    Student(string student_id, string first_name, string last_name, string email, int age, int days[], DegreeProgram degreeType);
+    Student(string student_id, string first_name,
+    string last_name, string email, int age, int days[], 
+    DegreeProgram degree_program);
 };
 
-#endif  // C867_PROJECT_STUDENT_H_
+#endif /* student_h */
+
 

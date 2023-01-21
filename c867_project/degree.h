@@ -7,6 +7,9 @@
 
 #ifndef degree_h
 #define degree_h
+#include <string>
+
+
 enum DegreeProgram {
     SECURITY,
     NETWORK,

@@ -3,11 +3,14 @@
 //  c867_project
 //
 //  Created by Alex Howard on 1/18/23.
-//
-
-#include "student.h"
 
 // default constructor
+#include "student.h"
+#include "degree.h"
+#include <string>
+
+using std::string;
+
 Student::Student() {
     this -> _student_id = "";
     this -> _first_name = "";
@@ -51,6 +54,9 @@ void Student::setDaysInCourse(int *days_in_course) {
     for(int i = 0; i < 3; i++) {
         this->_days_in_course[i] = days_in_course[i];
     }
+}
+void Student::setAge(int new_age) {
+    this->_age = new_age;
 }
 void Student::setEmail(string new_email) {
     this->_email = new_email;
