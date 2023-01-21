@@ -34,7 +34,7 @@ Student::Student(string student_id, string first_name, string last_name, string 
 }
 
 void Student::print() {
-    cout << _student_id << "First Name: " << _first_name << "\tLast Name: " << _last_name
+    cout << "Student ID: " <<_student_id << "\tFirst Name: " << _first_name << "\tLast Name: " << _last_name
     << "\tAge: " << _age << "\tDays In Course: {" << _days_in_course[0]  << ", "
     << _days_in_course[1] << ", " << _days_in_course[2] << "}\t Degree Program: "
     << _degree_program << "\n";

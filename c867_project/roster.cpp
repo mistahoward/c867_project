@@ -45,7 +45,7 @@ void Roster::remove(string working_student_id) {
 }
 
 void Roster::printAll() {
-    for (int i = 0; i <= Roster::roster_size; i++) {
+    for (int i = 0; i < Roster::roster_size; i++) {
         Student* current_student = classRosterArray[i];
         current_student->print();
     }
