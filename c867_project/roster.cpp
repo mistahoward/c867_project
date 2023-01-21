@@ -52,7 +52,7 @@ void Roster::printAll() {
 }
 
 void Roster::printAverageDaysInCourse(string working_student_id) {
-    for(int i = 0; i <= Roster::roster_size; i++) {
+    for(int i = 0; i < Roster::roster_size; i++) {
         Student* current_student = classRosterArray[i];
         if (current_student->student_id() == working_student_id) {
             int* days_in_course = current_student->daysInCourse();
@@ -85,13 +85,16 @@ void Roster::printAverageDaysInCourse(string working_student_id) {
 }
 
 void Roster::printInvalidEmails() {
-    for (int i = 0; i <= Roster::roster_size; i++) {
+    for (int i = 0; i < Roster::roster_size; i++) {
         Student* current_student = classRosterArray[i];
         string working_email = current_student->email();
-        if (working_email.find("@") && working_email.find(".") && !working_email.find(" ")) {
+        bool hasAt = working_email.find("@") != string::npos;
+        bool hasDot = working_email.find(".") != string::npos;
+        bool hasSpace = working_email.find(" ") != string::npos;
+        if(hasAt && hasDot && !hasSpace) {
             break;
         }
-        cout << "Student ID " << current_student->student_id() << " has an invalid email of " <<
+         cout << "Student ID " << current_student->student_id() << " has an invalid email of " <<
         working_email << ".\n";
     }
 }

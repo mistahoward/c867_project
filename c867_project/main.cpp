@@ -20,7 +20,7 @@ int main() {
         "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,Alex,Howard,jhow119@wgu.edu,25,7,7,7,SOFTWARE"
     };
     
-    cout << "C867 - Scripting and Programming - Applications - C++ - 000733175 - Jacob 'Alex' Howard";
+    cout << "C867 - Scripting and Programming - Applications - C++ - 000733175 - Jacob 'Alex' Howard\n";
     Roster classRoster;
     int numberOfStudents = sizeof(studentData) / sizeof(studentData[0]);
 
@@ -72,7 +72,7 @@ int main() {
         
         classRoster.add(wsid, wsfn, wsln, wse, wsa, wsd1, wsd2, wsd3, wsdp);
     }
-    
-    classRoster.printAll();
+    // classRoster.printAll();
+    classRoster.printInvalidEmails();
     return 0;
 }
